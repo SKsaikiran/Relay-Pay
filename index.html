@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Relay Pay</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@500&display=swap" rel="stylesheet"/>
 <style>
@@ -20,7 +23,7 @@
 }
 html,body{width:100%;height:100%;background:#e5e7eb;font-family:'DM Sans',sans-serif;overflow:hidden;}
 .app-shell{display:flex;align-items:flex-start;justify-content:center;width:100%;height:100vh;overflow:hidden;}
-.phone-wrap{position:relative;width:100%;max-width:420px;height:100vh;background:var(--card);display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow-lg);}
+.phone-wrap{position:relative;width:100%;max-width:420px;min-height:100vh;background:var(--card);display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow-lg);}
 .status-bar{background:var(--p);height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex-shrink:0;z-index:10;}
 .status-time{font-size:12px;font-weight:600;color:#fff;font-family:'DM Mono',monospace;}
 .status-icons{display:flex;align-items:center;gap:6px;}
@@ -56,7 +59,7 @@ html,body{width:100%;height:100%;background:#e5e7eb;font-family:'DM Sans',sans-s
 .bal-row{display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
 .bal-sub{font-size:11px;color:rgba(255,255,255,0.6);}
 .bal-pill{background:rgba(255,255,255,0.15);border-radius:20px;padding:3px 10px;font-size:10px;color:#fff;font-weight:600;}
-.screen-body{flex:1;display:flex;flex-direction:column;background:var(--bg);overflow:hidden;position:relative;}
+.screen-body{flex:1;display:flex;flex-direction:column;background:var(--bg);overflow:hidden;position:relative;min-height:0;}
 .screen{display:none;flex-direction:column;flex:1;animation:fadeUp 0.25s ease;overflow:hidden;}
 .screen.active{display:flex;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
