@@ -1475,7 +1475,7 @@ function endGuide(){
 }
 
 window.addEventListener('load',()=>{
-  (new) goScreen('home');
+  goScreen('home');
   setMode('bank');
   if(!localStorage.getItem('rp_guided'))setTimeout(startGuide,800);
 });
