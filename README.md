@@ -1,152 +1,160 @@
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+<div align="center">
 
-# Relay Pay
+<img src="banner.svg" alt="Relay Pay Banner" width="100%"/>
 
-**A UX concept that adds payment delegation natively into UPI apps.**
+<br/>
+<br/>
 
-Live Demo → [relay-pay.github.io](https://your-username.github.io/relay-pay)
+<p>
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License"/></a>
+  <img src="https://img.shields.io/badge/Type-Product%20Feature%20Concept-5B3FD9?style=flat" alt="Type"/>
+  <img src="https://img.shields.io/badge/Platform-UPI-orange?style=flat" alt="Platform"/>
+  <img src="https://img.shields.io/badge/Built%20with-HTML%20%2B%20CSS%20%2B%20JS-blue?style=flat" alt="Stack"/>
+  <img src="https://img.shields.io/badge/Status-Live%20Demo-green?style=flat" alt="Status"/>
+</p>
 
----
+<p>
+  <a href="https://SKsaikiran.github.io/relay-pay"><img src="https://img.shields.io/badge/Try%20the%20Prototype-Live%20Demo%20%E2%86%92-5B3FD9?style=for-the-badge" alt="Live Demo"/></a>
+</p>
 
-## What is Relay Pay?
+<br/>
 
-Relay Pay is a product design concept exploring a single question:
-
-> What if you could ask someone else to pay for you — without leaving your UPI app?
-
-Today when your bank server is down, your balance is low, or you simply need a family member to cover a payment, the workaround is manual and fragmented: call someone, read out a QR, screenshot, WhatsApp, wait. Relay Pay solves this with one toggle inside the payment screen.
+</div>
 
 ---
 
 ## The Problem
 
-India processes over 16 billion UPI transactions every month. Millions still fail or get abandoned due to:
+You are at a shop. Your UPI bank shows a server error. People in the queue are staring. You have no cash. Your phone has full signal. But you still cannot pay.
 
-- Bank server errors at point of sale
-- Insufficient balance at checkout
-- No way to ask a trusted person to pay without leaving the app
-
-The infrastructure is ready. The habit is set. What is missing is a native way to get help paying.
+India processes over **16 billion UPI transactions every month.** Millions still fail or get abandoned because there is no native way to get help from someone you trust without leaving the app.
 
 ---
 
-## The Solution — A 3-Way Toggle
+## The Concept
 
-At the payment screen, instead of one option (your bank), Relay Pay gives you three:
+Relay Pay adds a **3-way toggle** to the existing UPI payment screen. One toggle. Three ways to always get through.
 
-| Toggle | What it does |
-|--------|-------------|
+<br/>
+
+<div align="center">
+
+| &nbsp;&nbsp;&nbsp;Toggle&nbsp;&nbsp;&nbsp; | What it does |
+|:---:|---|
 | **Bank** | Standard UPI bank payment |
 | **Relay Pay** | Ask a trusted contact to pay on your behalf via a live UPI collect request |
 | **Relay Wallet** | Pay instantly from a pre-loaded wallet funded by family or trusted contacts |
+
+</div>
+
+<br/>
+
+No new app. No new habit. Just a smarter toggle inside the UPI app you already use every day.
 
 ---
 
 ## Feature Flows
 
-### Flow 1 — Relay Pay
+### Flow 1: Relay Pay
+
 ```
-Scan QR → Bank server error → Switch to Relay Pay toggle
-→ Pick a trusted contact → Slide to send request
-→ Contact receives notification → Contact taps Pay
-→ Payment confirmed at merchant
+Scan QR  -->  Bank server error  -->  Switch to Relay Pay toggle -->  Pick a trusted contact  -->  Slide to send request -->  Contact receives notification  -->  Contact taps Pay -->  Payment confirmed at merchant
 ```
 
-### Flow 2 — Relay Wallet
+### Flow 2: Relay Wallet
+
 ```
-Scan QR → Bank server error → Switch to Wallet toggle
-→ Tap Pay via Wallet → Enter 4-digit MPIN
-→ Payment confirmed from pre-loaded funds
+Scan QR  -->  Bank server error  -->  Switch to Wallet toggle -->  Tap Pay via Wallet  -->  Enter 4-digit MPIN -->  Payment confirmed from pre-loaded funds
 ```
 
 ---
 
-## Why This Fits UPI Perfectly
+## Why This Fits UPI
 
-- **No new payment rail needed** — built on UPI collect requests that already exist
-- **Any UPI app can implement it** — payer and requester don't need the same app
-- **Adds dignity** — no public phone calls, no WhatsApp QR screenshots
-- **Relay Wallet is proven** — FamApp by Trio already does this for teenagers paying at merchant QRs. Relay Pay brings it to everyone.
+- **No new payment rail needed.** Built on UPI collect requests that already exist today.
+- **Works across apps.** The payer and requester do not need to use the same UPI app.
+- **Adds dignity.** No public phone calls, no WhatsApp QR screenshots, no awkward waits.
+- **Relay Wallet is already proven.** FamApp by Trio lets teenagers pay at merchant QRs via a locked wallet. Relay Pay brings this model to every UPI user of all ages.
 
 ---
 
-## What's Inside the Prototype
+## What is Inside the Prototype
 
-- Full interactive mobile UI (420px phone shell)
-- Working 3-way payment toggle
-- Contact search and selection
-- Live request waiting screen with simulate button
-- Notification popup with Pay / Decline
-- Payment failed screen (declined flow)
-- Relay Wallet with MPIN keypad
-- Transaction history with payment method icons
-- Interactive feature guide (Call of Duty style — user clicks through)
-- Two guide branches: Relay Pay flow and Wallet flow
+```
+index.html  (single file, zero dependencies)
+```
+
+| Screen | Description |
+|--------|-------------|
+| Home | Balance card, quick actions, recent activity, feature tour |
+| Scan QR | Camera scanner simulation |
+| Pay | Amount input, 3-way toggle, bank and contact and wallet panels |
+| Waiting | Live request sent, simulate contact notification |
+| Notification | Contact Pay and Decline popup |
+| Success | Confirmed payment with vendor QR |
+| Failed | Declined or timed out request screen |
+| Wallet | Pre-loaded funds, daily spending cap, transaction history |
+| History | Full log with payment method icons |
+| Contacts | Trusted contacts list |
+| Profile | Settings and feature tour replay |
+
+**Interactive feature guide included.** Click-through tutorial with two branches covering both flows, spotlight highlighting, and step-by-step tooltips.
 
 ---
 
 ## How to Run
 
-**Option 1 — Open directly**
-Download `index.html` and open it in any browser. No server needed.
+**In browser (no install needed)**
+```
+Download index.html and open it in Chrome, Safari or Firefox
+```
 
-**Option 2 — Live hosted version**
-Visit the GitHub Pages link at the top of this README.
-
----
-
-## Tech Stack
-
-- Pure HTML, CSS, JavaScript — zero dependencies, zero frameworks
-- Single file, fully self-contained
-- DM Sans + DM Mono via Google Fonts
-- Works on mobile and desktop browsers
+**Live hosted version**
+```
+https://SKsaikiran.github.io/relay-pay
+```
 
 ---
 
-## Screens
+## Tech
 
-| Screen | Description |
-|--------|-------------|
-| Home | Balance, quick actions, recent activity, feature tour button |
-| Scan QR | Camera scanner simulation |
-| Pay | Amount input, 3-way toggle, contact/bank/wallet panels |
-| Waiting | Live request sent, simulate contact notification |
-| Notification | Contact's Pay / Decline popup |
-| Success | Confirmation with vendor QR |
-| Failed | Declined or timed out request |
-| Wallet | Pre-loaded funds, daily cap, transaction history |
-| History | Full transaction log with payment method icons |
-| Contacts | Trusted contacts list |
-| Profile | Settings and feature tour replay |
+- Pure HTML, CSS and JavaScript
+- Zero dependencies, zero frameworks, zero build step
+- Single self-contained file
+- DM Sans and DM Mono via Google Fonts
+- Responsive on mobile and desktop
 
 ---
 
-## Concept Context
+## Important Note
 
-This is not a real application. It is a UX proposal demonstrating how existing UPI infrastructure could be extended with a delegation layer — enabling payments to flow through trusted relationships rather than breaking when a single bank fails.
-
-The concept is relevant to any UPI app: PhonePe, Google Pay, Paytm, CRED, or a future NPCI-native implementation.
+This is a **product feature concept and interactive prototype.** It is not a real application and is not affiliated with NPCI, PhonePe, Google Pay, Paytm, CRED or any other UPI provider. It is shared as a portfolio piece to explore how existing UPI infrastructure could support a native payment delegation layer.
 
 ---
 
 ## Author
 
+<div align="center">
+
 **Sai Kiran J**
 
-Built as a UX concept and interactive prototype.
+*Product Feature Concept and Interactive Prototype*
 
-Connect on LinkedIn → [your LinkedIn URL]
+[![Email](https://img.shields.io/badge/Email-Saikiranj2002%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:Saikiranj2002@gmail.com)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sksaikiranj)
 
-Email → Saikiranj2002@gmail.com
+</div>
 
 ---
 
 ## License
 
-© 2025 Sai Kiran J
+Copyright (c) 2025 Sai Kiran J
 
-Licensed under Creative Commons Attribution-NonCommercial 4.0 International.
-Shared for portfolio and educational purposes. Commercial use requires written permission.
+Licensed under [Creative Commons Attribution-NonCommercial 4.0 International.](https://creativecommons.org/licenses/by-nc/4.0/)
+
+Shared for portfolio and educational purposes. Commercial use requires written permission from the author.
 
 Contact: Saikiranj2002@gmail.com
+![Uploading banner.svg…]()
