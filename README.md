@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="banner.svg" alt="Relay Pay Banner" width="100%"/>
+<img src="Creatives/banner.svg" alt="Relay Pay Banner" width="100%"/>
 
 <br/>
 <br/>
@@ -14,7 +14,7 @@
 </p>
 
 <p>
-  <a href="https://SKsaikiran.github.io/relay-pay"><img src="https://img.shields.io/badge/Try%20the%20Prototype-Live%20Demo%20%E2%86%92-5B3FD9?style=for-the-badge" alt="Live Demo"/></a>
+  <a href="https://sksaikiran.github.io/Relay-Pay/"><img src="https://img.shields.io/badge/Try%20the%20Prototype-Live%20Demo%20%E2%86%92-5B3FD9?style=for-the-badge" alt="Live Demo"/></a>
 </p>
 
 <br/>
@@ -157,4 +157,3 @@ Licensed under [Creative Commons Attribution-NonCommercial 4.0 International.](h
 Shared for portfolio and educational purposes. Commercial use requires written permission from the author.
 
 Contact: Saikiranj2002@gmail.com
-![Uploading banner.svg…]()
